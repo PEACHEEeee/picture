@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>插入图片</title>
+    <title>点击按钮显示图片</title>
+    <style>
+        #myImage {
+            display: none; /* 初始时隐藏图片 */
+        }
+    </style>
 </head>
 <body>
-    <img src="10.jpg" alt="图片描述">
+    <button id="myButton">点击显示图片</button>
+    <img id="myImage" src="10.jpg" alt="显示的图片">
+
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            var image = document.getElementById('myImage');
+            image.style.display = 'block'; // 点击按钮后显示图片
+        });
+    </script>
 </body>
 </html>
+
